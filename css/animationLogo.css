@@ -1,14 +1,32 @@
-/* The element to apply the animation to */
-#githubLogo {
-  margin: 5%;
+/* title and images styling from https://www.youtube.com/watch?v=N4yY-rkhkKY */
+
+.title {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* The first element to apply the animation to */
+#github01 {
+/*  margin: 5%;*/
   width: 100px;
   height: 100px;
-  animation-name: github;
-  animation-duration: 3s;
+  border-radius: 50%;
+  animation-name: github1;
+  animation-duration: 2s;
   animation-iteration-count: infinite;    
 }
-/* The animation code to rotate the image as well as change the shape of the image using different border radii */
-@keyframes github {
+
+/* The animation code to rotate the first image as well as change the shape of the image using different border radii */
+/*for some reason, when I added a second div for another image and a container div for both images, 
+the border radius styling refuses to work*/
+@keyframes github1 {
   0%   {border-radius: 50%;}
   20%  {border-radius: 25%;
         transform: rotate(90deg);}
@@ -18,7 +36,26 @@
         transform: rotate(270deg);}
   80%  {border-radius: 50%;
         transform: rotate(360deg);}
- 100%   {border-radius: 50%;;
+ 100%   {border-radius: 50%;}
+}
 
+/* The second element to apply the animation to */
+#github02 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation-name: github2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;    
+}
 
+/* The animation code to resize the second image as well as rotate the image */
+/*for some reason, when I added a second div for another image and a container div for both images, 
+the border radius styling refuses to work*/
+@keyframes github2 {
+  0%   {border-radius: 50%;}
+  20%  {transform: scale(1.25,1.25);}
+  40%  {transform: scale(1,1);}
+  60%  {transform: scale(0.75,0.75);}
+  80% {transform: scale(1,1) rotate(360deg);}
 }
