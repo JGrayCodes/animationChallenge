@@ -18,9 +18,11 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  }
+
+  #github01:hover {
   animation-name: github1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;    
+  animation-duration: 1s;
 }
 
 /* The animation code to rotate the first image as well as change the shape of the image using different border radii */
@@ -44,11 +46,12 @@ the border radius styling refuses to work*/
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  animation-name: github2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;    
 }
 
+#github02:hover {
+  animation-name: github2;
+  animation-duration: 1s;
+}
 /* The animation code to resize the second image as well as rotate the image */
 /*for some reason, when I added a second div for another image and a container div for both images, 
 the border radius styling refuses to work*/
